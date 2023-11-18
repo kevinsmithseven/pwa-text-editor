@@ -21,7 +21,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin'
+        title: 'JATE'
       }),
       new GenerateSW({
         swDest: '/src-sw.js'
