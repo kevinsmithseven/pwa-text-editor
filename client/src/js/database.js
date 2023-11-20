@@ -29,10 +29,10 @@ export const getDb = async () => {
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jateObjectStore', 'readonly');
   const store = tx.objectStore('jateObjectStore');
-  const request = store.get(1); // Get the record with id: 1
+  const request = store.get(1); 
   const result = await request;
   console.log('result.value', result);
-  return result ? result.value : ''; // Return the value or an empty string if not found
+  return result?.value;
 };
 
 initdb();
